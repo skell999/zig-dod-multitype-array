@@ -30,11 +30,13 @@ pub fn MultiTypeArray(comptime typeTuple: anytype) type {
     };
     const numFields = fieldNames.len;
 
+
+
     return struct {
         alloc: std.mem.Allocator,
         data: [numFields][]u8, // ptrs to data arrays
         uid: []usize, // list of object uid's
-        indices: [][numFields]usize, // object data indices
+        indices: [][numFields]usize, // object data indices. perhaps group like objects in memory and store 1 offset for each object type. so for each type indices would start at zero + offset
 
         const Self = @This();
         var seed: [8]u8 = undefined;
