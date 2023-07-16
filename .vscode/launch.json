@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        
+        {
+            "name": "Test",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/test",
+            "args": [],
+             "preLaunchTask": "Test",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+        },
+        
+        // {
+        //     "name": "Debug",
+        //     "type": "cppvsdbg",
+        //     "request": "launch",
+        //     "program": "${workspaceFolder}/zig-out/bin/rui.exe",
+        //     "args": [],
+        //      "preLaunchTask": "Build",
+        //     "cwd": "${workspaceFolder}"
+        // },
+
+        {
+            "name": "Test MultiTypeArray",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/multitypearray",
+            "args": [],
+             "preLaunchTask": "Test MultiTypeArray",
+            "cwd": "${workspaceFolder}"
+        },
+     
+        // {
+        //     "name": "Test Dataflow",
+        //     "type": "cppvsdbg",
+        //     "request": "launch",
+        //     "program": "${workspaceFolder}/zig-out/bin/dataflow",
+        //     "args": [],
+        //      "preLaunchTask": "Test Dataflow",
+        //     "cwd": "${workspaceFolder}"
+        // },
+    ],
+    "compounds": []
+}

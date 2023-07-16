@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "command": "zig build -freference-trace",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        },
+
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "zig test --test-no-exec -femit-bin=zig-out/bin/test src/main.zig",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "clear": true,
+				// "focus": true
+            },
+        },
+
+        {
+            "label": "Test MultiTypeArray",
+            "type": "shell",
+            "command": "zig test --test-no-exec -femit-bin=zig-out/bin/multitypearray ./src/MultiTypeArray.zig",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "clear": true
+            }
+        },
+
+        // {
+        //     "label": "Test Dataflow",
+        //     "type": "shell",
+        //     "command": "zig test --test-no-exec -femit-bin=zig-out/bin/dataflow ./src/gui/core/dataflow.zig",
+        //     "problemMatcher": [],
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     },
+        //     "presentation": {
+        //         "clear": true
+        //     }
+        // },
+
+    ]
+}
