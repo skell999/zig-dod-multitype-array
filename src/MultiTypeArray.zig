@@ -30,7 +30,8 @@ pub fn MultiTypeArray(comptime typeTuple: anytype) type {
     };
     const numFields = fieldNames.len;
 
-
+// index plus offset VERSUS array of index offsets for each object
+// faster lookup VERSUS faster contiguous array processing
 
     return struct {
         alloc: std.mem.Allocator,
